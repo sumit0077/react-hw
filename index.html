@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <div id="cont">not render</div>
+</body>
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script>
+    
+    const h1 = React.createElement("h1",{},"Topic Covered");
+
+    const p = React.createElement("p",{},"It's a lot of work to create a professional website, so if you're new to web development.");
+
+    const a1 = React.createElement(
+            "a",
+            { href: "https://example.com", target: "_blank", rel: "noopener noreferrer" },
+            "Installing basic software"
+        )
+    const div1 = React.createElement("div",{},
+    "When it comes to tools for building a website, there's a lot to pick from. If you're just starting, you might be confused by the array of code editors, frameworks, and testing tools out there. In this article, we will show you step-by-step how to install the software you need to begin some basic web development."
+    )
+
+    const div11 = React.createElement("div",{},[a1,div1]);
+    
+
+    const a2 = React.createElement(
+            "a",
+            { href: "https://example.com", target: "_blank", rel: "noopener noreferrer" },
+            "HTML basics"
+        )
+    const div2 = React.createElement("div",{},
+    "HyperText Markup Language (HTML) is the code that you use to structure your web content and give it meaning and purpose. For example, is my content a set of paragraphs or a list of bullet points? Do I have images inserted on my page? Do I have a data table? Without overwhelming you, this article will provide enough information to make you familiar with HTML."
+    )
+
+    const div12 = React.createElement("div",{},[a2,div2]);
+    const a3 = React.createElement(
+            "a",
+            { href: "https://example.com", target: "_blank", rel: "noopener noreferrer" },
+            "CSS basics"
+        )
+    const div3 = React.createElement("div",{},
+    "Cascading Style Sheets (CSS) is the code that you use to style your website. For example, do you want the text to be black or red? Where should content be drawn on the screen? What background images and colors should be used to decorate your website? In this article, we'll take you through what you need to get started."
+    )
+
+    const div13 = React.createElement("div",{},[a3,div3]);
+
+
+    const div = React.createElement("div",{},[h1,p,div11,div12,div13]);
+    
+    const rot = ReactDOM.createRoot(document.getElementById("cont"));
+    rot.render(div);
+
+</script>
+</html>
